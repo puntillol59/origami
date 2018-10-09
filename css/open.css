@@ -26,10 +26,10 @@
     background:#eeeeee;
     height:100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+     font-family: 'robotoregular';
 }
 .text{
-    font-family: 'Roboto', sans-serif;
+     font-family: 'robotoregular';
     color:#fff;
     padding:8px;
     margin-left:10px;
@@ -45,7 +45,7 @@
     height: 40px;
     width: 100%;
     background:#ffc107 ;
-    font-family: 'Roboto', sans-serif;
+     font-family: 'robotoregular';
 }
 .toolbar{
     float:right;

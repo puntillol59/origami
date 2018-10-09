@@ -1,23 +1,34 @@
 <title>Origami - Settings</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-red.min.css" />
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+   <link rel="stylesheet" href="fonts/compiled/roboto/stylesheet.css">
+       <link rel="stylesheet" href="fonts/compiled/productsans/stylesheet.css">
+     <link rel="stylesheet" href="fonts/compiled/md-icons/material-icons.css">
+<link rel="stylesheet" href="css/material.min.css">
+<script src="js/material.min.js"></script>
+<script defer src="js/material.min.js"></script>
      <link rel="stylesheet" href="css/window.css" />
 <link rel="stylesheet" href="css/iconography.css" />
     <link rel="stylesheet" href="css/menus.css" />
     <link rel="stylesheet" href="css/gui.css" />
     <link rel="stylesheet" href="css/body.css" />
+        <link rel="stylesheet" href="css/tabs.css" />
     <script src="js/windows.js"></script>
+    <script src="js/blob.js"></script>
+    <script src="js/save.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/import.js"></script>
+<link rel="manifest" href="pwa-manifest.json">
+<meta name=”theme-color” content=”#FFA000″>
     <script src="js/popup.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="js/controls.js"></script>
+        <script src="js/download.js"></script>
     <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/widget.js"></script>
-    <script src="js/settings.js"></script>
-     <script language="JavaScript" type="text/javascript" src="js/import.js"></script><script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-     <link rel="stylesheet" href="css/themes/theme-light.css" />
+      <script src="js/jquery.js"></script>
+  <div id="theme">   <link  rel="stylesheet" href="css/themes/theme-default.css" /></div>
     <link rel="stylesheet" href="css/emulator.css" />
+    <link rel="stylesheet" href="fonts/compiled/sourcecode/stylesheet.css">
+      <script language="JavaScript" type="text/javascript" src="js/331.js"></script>
 
 
 
@@ -52,12 +63,12 @@
 
 <style>
 * {box-sizing: border-box}
-body {font-family: "Roboto", sans-serif; background:#ffffff;}
+body { font-family: 'robotoregular'; background:#ffffff;}
 
 /* Style the tab */
 .tab35 {
     float: left;
-   font-family: "Roboto", sans-serif;
+    font-family: 'robotoregular';
     background-color: #ffffff;
     width: 102px;
     height: 100%;
@@ -69,7 +80,7 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
     background-color: inherit;
     color: black;
     height:30px;
-    font-family: "Roboto", sans-serif;
+     font-family: 'robotoregular';
     width: 100px;
     border: none;
     outline: none;
@@ -97,12 +108,12 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
     padding: 0px 12px;
 
     height: 300px;
-    font-family: "Roboto", sans-serif;
+     font-family: 'robotoregular';
 }
     .htitle{
         color:#ff8f00;
         font-size:15px;
-         font-family: "Roboto", sans-serif;
+          font-family: 'robotoregular';
         margin-top:25px;
         margin-left:15px;
     }
@@ -154,9 +165,9 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
 <div class="tab35">
   <button class="tablinks" onclick="openCity(event, 'Themes')" id="defaultOpen">Themes</button>
   <button class="tablinks" onclick="openCity(event, 'Emulator')">Emulator</button>
-  <button class="tablinks" onclick="openCity(event, 'Server')">Server</button>
+  <button class="tablinks" onclick="openCity(event, 'Server')">Components</button>
     <button class="tablinks" onclick="openCity(event, 'Ace')">Ace</button>
-    <button class="tablinks" onclick="openCity(event, 'Widgets')">Widgets</button>
+    <button class="tablinks" onclick="openCity(event, 'linux')">Linux</button>
     <button class="tablinks" onclick="openCity(event, 'Interface')">Interface</button>
     <button class="tablinks" onclick="openCity(event, 'Help')">Help</button>
     <button class="tablinks" onclick="openCity(event, 'Developer')">Developer</button>
@@ -194,7 +205,39 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
 
 
 
-
+<style>
+    .chromeprime{
+        background:#254FAE;
+        height:37.5px;
+        width:75px;
+    }
+    .chromesec{
+        background:#3367D6;
+        height:37.5px;
+        width:75px;
+    }
+    .chromeid2{
+        float:left;
+        margin-top:20px;
+        margin-left:100px;
+        background:#3367D6;
+        color:#ffffff;
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Chrome OS</p>
+            <button onclick="chromeset()" class="chromeid2 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="chromeprime"></div>
+            <div class="chromesec"></div>
+            </div>
+            </div>
+        </div>
 
 
 
@@ -517,6 +560,284 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
         </div>
 
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style>
+        .playprime{
+        background:#0C7D46;
+        height:37.5px;
+        width:75px;
+        }
+        .playsec{
+        background:#0F9D58;
+        height:37.5px;
+        width:75px;
+        }
+        .id10{
+        float:left;
+        margin-top:20px;
+        margin-left:105px;
+        background:#0C7D46;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Play Apps</p>
+            <button onclick="playset()" class="id10 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="playprime"></div>
+            <div class="playsec"></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style>
+        .movprime{
+        background:#CC1236;
+        height:37.5px;
+        width:75px;
+        }
+        .movsec{
+        background:#FF1744;
+        height:37.5px;
+        width:75px;
+        }
+        .id11{
+        float:left;
+        margin-top:20px;
+        margin-left:90px;
+        background:#CC1236;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Play Movies</p>
+            <button onclick="movset()" class="id11 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="movprime"></div>
+            <div class="movsec"></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         <style>
+        .bookprime{
+        background:#027CB7;
+        height:37.5px;
+        width:75px;
+        }
+        .booksec{
+        background:#039BE5;
+        height:37.5px;
+        width:75px;
+        }
+        .id12{
+        float:left;
+        margin-top:20px;
+        margin-left:95px;
+        background:#027CB7;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Play Books</p>
+            <button onclick="bookset()" class="id12 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="bookprime"></div>
+            <div class="booksec"></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style>
+        .musprime{
+        background:#CC451B;
+        height:37.5px;
+        width:75px;
+        }
+        .mussec{
+        background:#FF5722;
+        height:37.5px;
+        width:75px;
+        }
+        .id13{
+        float:left;
+        margin-top:20px;
+        margin-left:95px;
+        background:#CC451B;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Play Music</p>
+            <button onclick="musset()" class="id13 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="musprime"></div>
+            <div class="mussec"></div>
+            </div>
+            </div>
+        </div>
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <style>
+        .newsprime{
+        background:#7C1F8C;
+        height:37.5px;
+        width:75px;
+        }
+        .newssec{
+        background:#9C27B0;
+        height:37.5px;
+        width:75px;
+        }
+        .id14{
+        float:left;
+        margin-top:20px;
+        margin-left:100px;
+        background:#7C1F8C;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Play News</p>
+            <button onclick="newsset()" class="id14 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="newsprime"></div>
+            <div class="newssec"></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
     </div>
 </div>
 
@@ -639,7 +960,7 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
      <option value="2">WebView</option>
     </select>
   </div>
-<div class="emu2"><p class="switchtext2">Use WebView component for rendering</p> </div>
+<div class="emu2"><p class="switchtext2">Specify preview render component</p> </div>
 
 </div>
 
@@ -655,7 +976,7 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
 
 
 <div id="Server" class="tabcontent35">
-  <p class="htitle">Server</p>
+  <p class="htitle">Components</p>
     <div class="separate"></div>
 
 
@@ -669,9 +990,13 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
     <div class="separate"></div>
 </div>
 
-<div id="Widgets" class="tabcontent35">
-   <p class="htitle">Widgets</p>
+<div id="linux" class="tabcontent35">
+   <p class="htitle">Linux (Beta)</p>
     <div class="separate"></div>
+    
+    <button class="btn-material" onclick='window.open("pages/linux-optin.html","Enable Linux","width=768, height=640");'>
+        Enable Linux
+    </button>
 </div>
 
 <div id="Interface" class="tabcontent35">
@@ -691,7 +1016,7 @@ body {font-family: "Roboto", sans-serif; background:#ffffff;}
 </div>
 
 <div id="Updates" class="tabcontent35">
-  <iframe class="if" src="update.html" style="height:400px; width: 470px;  border:none;"></iframe>
+  <iframe class="if" src="update-internal.html" style="height:400px; width: 470px;  border:none;"></iframe>
 </div>
 
 <div id="Credits" class="tabcontent35">

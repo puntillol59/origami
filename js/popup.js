@@ -87,5 +87,40 @@ function grayset() {
   parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-gray.css" />';;
   parent.window.editor.setTheme("ace/theme/chrome");
 }
-
+function chromeset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-chromeos.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
+function playset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-play.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
+function movset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-mov.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
+function bookset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-books.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
+function musset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-music.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
+function newsset() {
+  parent.window.document.getElementById("theme").innerHTML='<link  rel="stylesheet" href="css/themes/theme-news.css" />';;
+  parent.window.editor.setTheme("ace/theme/chrome");
+}
 //onclick="settings()"
+
+
+
+
+
+function openOpen() {
+    document.getElementById("openov").style.display = "block";
+}
+
+function closeOpen() {
+    document.getElementById("openov").style.display = "none";
+}
