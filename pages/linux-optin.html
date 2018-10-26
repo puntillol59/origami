@@ -1,4 +1,5 @@
- <script>
+<script src="../js/optin.js"></script>
+<script>
          
          
          function sleep(ms) {
@@ -83,7 +84,7 @@ async function demo() {
     </p>
     <div class="linux-optin-header"></div>
     
-    <button class="linux-btn btn-material-no">Cancel</button>
+    <button onclick="self.close()" class="linux-btn btn-material-no">Cancel</button>
     <a href="#2">
  <button class="linux-btn btn-material">Enable</button>
  </a>
@@ -138,7 +139,7 @@ either expressed or implied, of the FreeBSD Project.
     </p>
    </div>
     
-    <button class="eula-btn btn-material-no">Disagree</button>
+    <button  onclick="self.close()" class="eula-btn btn-material-no">Disagree</button>
         <a href="#3">
  <button class="eula-btn btn-material">Agree</button>
         </a>
@@ -188,7 +189,7 @@ Copyright (c) 2011-2014 Fabrice Bellard. Redistribution or commercial use is pro
     </p>
    </div>
     
-    <button class="eula-btn btn-material-no">Disagree</button>
+    <button  onclick="self.close()" class="eula-btn btn-material-no">Disagree</button>
  <a href="#4">
          <button class="eula-btn btn-material">Agree</button>
          </a>
@@ -292,7 +293,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
    </div>
     
     
-         <button class="eula-btn btn-material-no">Cancel</button>
+         <button  onclick="self.close()" class="eula-btn btn-material-no">Cancel</button>
  <a href="#5">
          <button onclick="demo()" class="eula-btn btn-material">Install</button>
          </a>
@@ -332,7 +333,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
     Enabling components
          </p>    
          
-    <button style="background:#e0e0e0;" id="installer" class="eula-btn btn-material">Done</button>
+    <button  onclick="self.close()" style="background:#e0e0e0;" id="installer" class="eula-btn btn-material">Done</button>
 
  
     </div>

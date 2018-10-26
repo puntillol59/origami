@@ -26,7 +26,7 @@ let profile = new fileSystem('user');
     General functions
 */
 
-var pointer = '>';
+var pointer = 'origami>';
 
 function lineTemplate(pointer, value, disabled="") {
   if (disabled != "" || disabled != "disabled") {
@@ -138,9 +138,7 @@ function error(input) {
   $(errorLine).insertBefore('.base-line');
   $('.base-input').val("");
 }
-function help(input) {
 
-}
 
 function clear() {
   $('.new-line').remove();
@@ -177,21 +175,27 @@ function interpret() {
   }
   else if (input.slice(0,19) == 'settings') {
     settings()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'emulator') {
     emuWindow()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'update') {
     update()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'getangular') {
     getAngular()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'console') {
     openTerminal()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'calculator') {
     calculateStuff()
+      newLine(input);
   }
   else if (input.slice(0,19) == 'neweditor') {
     openNewEditor()
@@ -202,16 +206,66 @@ function interpret() {
     newLine(input);
   }
   else if (input.slice(0,20) == 'alert') {
-    alert(input);
+    alert("Unable to start v86 container.\n 0x808080");
     newLine(input);
   }
   else if (input.slice(0,20) == 'help') {
-    help(input)
+   alert("help \n vmc enable \n vmc start core.v86 \n vmc start core.jsl \n vmc start local core.v86 \n vmc start local core.jsl \n alert \n notepad \n neweditor \n calculator \n console \n update \n getangular \n emulator \n settings \n tree \n mkdir \n changepointer \n fontfamily \n fontsize \n fontcolor \n backgroundcolor \n git \n exit \n policy --edit ");
+      newLine(input);
   }
   else if (input.slice(0,21) == 'echo') {
     echo(input);
     newLine(input);
   }
+    
+    
+    else if (input.slice(0,20) == 'vmc start core.v86') {
+    alert("Unable to start v86 container. \n Linux is not enabled. Use vmc enable to start.");
+    newLine(input);
+  }
+    
+    
+    else if (input.slice(0,20) == 'vmc start core.jsl') {
+     window.open("../core/linux/index.html","Enable Linux","width=768, height=640");
+    newLine(input);
+    }
+    
+    
+    else if (input.slice(0,20) == 'vmc start local core.v86') {
+    alert("Unable to start v86 container. \n Linux is not enabled. Use vmc enable to start.");
+    newLine(input);
+  }
+    
+    
+    else if (input.slice(0,20) == 'vmc start local core.jsl') {
+    
+        window.open("../core/linux/index.html","Enable Linux","width=768, height=640");
+    newLine(input);
+    }
+    
+    else if (input.slice(0,20) == 'vmc enable') {
+    window.open("../pages/linux-optin.html","Enable Linux","width=768, height=640");
+    newLine(input);
+    }
+    
+    
+      else if (input.slice(0,20) == 'policy --edit') {
+    window.open("../js/checktest.html","Policy Management","width=768, height=640");
+    newLine(input);
+    }
+    
+    
+    
+        else if (input.slice(0,20) == 'git') {
+    editPointer("git@origami~$");
+    newLine(input);
+  }
+    else if (input.slice(0,20) == 'exit') {
+    window.close()
+  }
+    
+    
+    
 
 
   else {

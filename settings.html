@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/iconography.css" />
     <link rel="stylesheet" href="css/menus.css" />
     <link rel="stylesheet" href="css/gui.css" />
+
     <link rel="stylesheet" href="css/body.css" />
         <link rel="stylesheet" href="css/tabs.css" />
     <script src="js/windows.js"></script>
@@ -73,7 +74,33 @@ body { font-family: 'robotoregular'; background:#ffffff;}
     width: 102px;
     height: 100%;
 }
+.btn-material {
+		    padding: 10px 20px;
+		    overflow: hidden;
+		    position: relative;
+		    text-decoration: none;
+		    border-radius: 4px;
+  background:#ffc107;
+		  
+		    border: none;
+		    font-size: 14px;
+		    text-align: center;
+		    width: auto;
+        color:#fff;
+        text-transform:none;
+        font-family: 'robotoregular', sans-serif;
+		}
+.btn-material:hover {
+		 
+  background:#ffb300;
+		  
+		}
 
+.btn-material:active {
+		 
+  background:#ffa000;
+		  
+		}
 /* Style the buttons inside the tab */
 .tab35 button {
     display: block;
@@ -994,9 +1021,9 @@ body { font-family: 'robotoregular'; background:#ffffff;}
    <p class="htitle">Linux (Beta)</p>
     <div class="separate"></div>
     
-    <button class="btn-material" onclick='window.open("pages/linux-optin.html","Enable Linux","width=768, height=640");'>
+    <div id="linuxOptin"><button class="btn-material" onclick='enableLinux()'>
         Enable Linux
-    </button>
+        </button></div>
 </div>
 
 <div id="Interface" class="tabcontent35">
@@ -1051,3 +1078,4 @@ function openCity(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
+<script src="js/check.js"></script>

@@ -28,6 +28,9 @@
 		  
 		}
 
+
+
+
 .lc{
     background:red;
 }
@@ -40,8 +43,27 @@
     margin-top:300px;
     margin-left:calc(384px - 228.5px);
 }
+.manifest-header{
+    background:url(../img/manifest.png);
+    width:457px;
+    height:165px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    position:absolute;
+    margin-top:300px;
+    margin-left:calc(384px - 228.5px);
+}
  .icon{
             background:url(../core/linux/images/crostini-linux.png);
+            height:50px;
+            width:50px;
+            background-size:50px;
+             margin-left:50px;
+            margin-top:50px;
+            position:absolute;
+        }
+.mf-icon{
+            background:url(../img/manifest-icon.png);
             height:50px;
             width:50px;
             background-size:50px;

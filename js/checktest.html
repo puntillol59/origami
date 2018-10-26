@@ -1,0 +1,335 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+<script src="check.js"></script>
+<button onclick='window.close()' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    X
+</button>
+<button onclick='localStorage.clear();' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    clear
+</button>
+<button onclick='localStorage.setItem("allowLinux", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow linux
+</button>
+<button onclick='localStorage.setItem("allowLinux", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    do not allow linux
+</button>
+<button onclick='localStorage.setItem("allowSharing", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow sharing
+</button>
+<button onclick='localStorage.setItem("allowSharing", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    do not allow sharing
+</button>
+<button onclick='localStorage.setItem("baseMode", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow baseMode
+</button>
+<button onclick='localStorage.setItem("baseMode", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable baseMode
+</button>
+<button onclick='localStorage.setItem("customBuild", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow customBuild
+</button>
+<button onclick='localStorage.setItem("customBuild", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable customBuild
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("demoMode", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow demoMode
+</button>
+<button onclick='localStorage.setItem("demoMode", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable demoMode
+</button>
+    
+    
+    
+
+<button onclick='localStorage.setItem("devConsole", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow devConsole
+</button>
+<button onclick='localStorage.setItem("devConsole", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable devConsole
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("deviceEnabled", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow deviceEnabled
+</button>
+<button onclick='localStorage.setItem("deviceEnabled", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable deviceEnabled
+</button>
+
+
+
+<button onclick='localStorage.setItem("deviceFrame", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow deviceFrame
+</button>
+<button onclick='localStorage.setItem("deviceFrame", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable deviceFrame
+</button>
+
+
+
+
+
+
+
+
+
+<button onclick='localStorage.setItem("deviceModel", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow deviceModel
+</button>
+<button onclick='localStorage.setItem("deviceModel", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable deviceModel
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("deviceSystem", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow deviceSystem
+</button>
+<button onclick='localStorage.setItem("deviceSystem", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable deviceSystem
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("enableAutocomplete", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow enableAutocomplete
+</button>
+<button onclick='localStorage.setItem("enableAutocomplete", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable enableAutocomplete
+</button>
+
+
+
+<button onclick='localStorage.setItem("enrollmentKey", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow enrollmentKey
+</button>
+<button onclick='localStorage.setItem("enrollmentKey", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable enrollmentKey
+</button>
+
+
+
+<button onclick='localStorage.setItem("enrollmentPolicy", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow enrollmentPolicy
+</button>
+<button onclick='localStorage.setItem("enrollmentPolicy", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable enrollmentPolicy
+</button>
+
+
+
+<button onclick='localStorage.setItem("enrollmentAddress", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow enrollmentAddress
+</button>
+<button onclick='localStorage.setItem("enrollmentAddress", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable enrollmentAddress
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("experimentalFeatures", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow experimentalFeatures
+</button>
+<button onclick='localStorage.setItem("experimentalFeatures", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable experimentalFeatures
+</button>
+
+
+
+<button onclick='localStorage.setItem("fontSize", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow fontSize
+</button>
+<button onclick='localStorage.setItem("fontSize", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable fontSize
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("isDeveloper", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow isDeveloper
+</button>
+<button onclick='localStorage.setItem("isDeveloper", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable isDeveloper
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("linuxEnabled", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow linuxEnabled
+</button>
+<button onclick='localStorage.setItem("linuxEnabled", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable linuxEnabled
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("loginAccess", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow loginAccess
+</button>
+<button onclick='localStorage.setItem("loginAccess", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable loginAccess
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("loginKey", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow loginKey
+</button>
+<button onclick='localStorage.setItem("loginKey", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable loginKey
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("offlineMode", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow offlineMode
+</button>
+<button onclick='localStorage.setItem("offlineMode", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable offlineMode
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("primaryColor", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow primaryColor
+</button>
+<button onclick='localStorage.setItem("primaryColor", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable primaryColor
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("renderComponent", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow renderComponent
+</button>
+<button onclick='localStorage.setItem("renderComponent", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable renderComponent
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("renderSizeHeight", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow renderSizeHeight
+</button>
+<button onclick='localStorage.setItem("renderSizeHeight", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable renderSizeHeight
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("renderSizeWidth", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow renderSizeWidth
+</button>
+<button onclick='localStorage.setItem("renderSizeWidth", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable renderSizeWidth
+</button>
+
+
+
+
+
+
+<button onclick='localStorage.setItem("secondaryColor", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow secondaryColor
+</button>
+<button onclick='localStorage.setItem("secondaryColor", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable secondaryColor
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("showDeviceGUI", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow showDeviceGUI
+</button>
+<button onclick='localStorage.setItem("showDeviceGUI", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable showDeviceGUI
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("startFullscreen", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow startFullscreen
+</button>
+<button onclick='localStorage.setItem("startFullscreen", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable startFullscreen
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("touchscreenMode", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow touchscreenMode
+</button>
+<button onclick='localStorage.setItem("touchscreenMode", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable touchscreenMode
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("uiTheme", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow uiTheme
+</button>
+<button onclick='localStorage.setItem("uiTheme", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable uiTheme
+</button>
+
+
+
+
+<button onclick='localStorage.setItem("useProductSans", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow useProductSans
+</button>
+<button onclick='localStorage.setItem("useProductSans", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable useProductSans
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("viewOnly", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow viewOnly
+</button>
+<button onclick='localStorage.setItem("viewOnly", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable viewOnly
+</button>
+
+
+
+
+
+<button onclick='localStorage.setItem("editorTheme", "true");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    allow editorTheme
+</button>
+<button onclick='localStorage.setItem("editorTheme", "false");' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    disable editorTheme
+</button>

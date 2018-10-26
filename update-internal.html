@@ -1,5 +1,5 @@
 <title>Updates</title>
-     
+
    <link rel="stylesheet" href="fonts/compiled/roboto/stylesheet.css">
        <link rel="stylesheet" href="fonts/compiled/productsans/stylesheet.css">
      <link rel="stylesheet" href="fonts/compiled/md-icons/material-icons.css">
@@ -64,24 +64,48 @@
 </style>
      
 <div class="content">
+    <div id="updstat">
 <i class="updicon material-icons">
 system_update
-</i>
-    <p class="titleup"><script>document.write(updateModifier)</script></p>
-    <p class="versions1">Current version: <script>document.write(origami.appVersion)</script></p>
-    <p class="versions2">Latest version: <script>document.write(origamiExternal.latest)</script></p>
-    
-    <script>
+</i></div> <script>
         var updateModifier = "Updates may be available"
         
-    if (origami.appVersion = origamiExternal.latest){
-        
-        var updateModifier = "Origami is up to date"
-    }
+    
        
     </script>
+    <p id="updt" class="titleup"><script>document.write(updateModifier)</script></p>
+    <p id="err" class="versions1">Current version: <script>document.write(origami.appVersion)</script></p>
+    <p id="v2" class="versions2">Latest version: <script>document.write(origamiExternal.latest)</script></p>
     
+   
+    <div id="btn-u">
    <a href="https://nmcain.github.io/origami/OE_update/update-handler-en.html">
-    <button class="update-btn btn-material">Update</button></a>
+       <button class="update-btn btn-material">Update</button></a></div>
     
-</div>
+</div><script>
+var customBuild = localStorage.getItem("customBuild");
+
+if (customBuild == 'true') {
+   
+    //alert("customBuild enabled")
+    document.getElementById("updstat").innerHTML = '<i class="updicon-err material-icons">warning</i>'
+    document.getElementById("updt").innerHTML = 'Updates are not supported';
+    
+    
+  
+
+    document.getElementById("err").innerHTML = 'Updates are not supported on custom builds because they may damage features, or open up a security risk. Please contact the developer of the custom build and have them register their build for updates.'
+    
+    document.getElementById("v2").innerHTML = ' '
+    document.getElementById("btn-u").innerHTML = ' '
+
+}
+else if (customBuild == 'false') {
+    //alert("customBuild has been disabled by your administrator")
+    
+    
+}
+else {
+        alert("The current value for policy customBuild is invalid.")
+    }
+</script>

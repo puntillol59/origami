@@ -16,7 +16,9 @@ function calculateStuff() {
 function openTerminal() {
     window.open("pages/console.html","Console","width=600, height=420");
 }
-
+function enableLinux(){
+    parent.window.open("pages/linux-optin.html","Enable Linux","width=768, height=640");
+}
 function noFeature() {
   var txt;
       if (confirm("This feature is not available yet. If you would like to contribute it to the program, visit http://github.com/nmcain/origami")) {
@@ -30,6 +32,7 @@ function noFeature() {
 }
 function on() {
     document.getElementById("overlay").style.display = "block";
+    
 }
 
 function off() {

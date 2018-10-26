@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><script src="js/windows.js"></script>
     <title>Origami Editor</title>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/gui.css" />
     <link rel="stylesheet" href="css/body.css" />
         <link rel="stylesheet" href="css/tabs.css" />
-    <script src="js/windows.js"></script>
+    
     <script src="js/blob.js"></script>
     <script src="js/save.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/import.js"></script>
@@ -108,8 +108,7 @@
   <div class="dropc dropdown-content2">
       <a onclick="undo()" href="#">Undo</a>
       <a onclick="redo()" href="#">Redo</a>
-    <a href="#">Indent More</a>
-      <a href="#">Indent Less</a>
+    
     <a href="#">Autocomplete</a>
       <a onclick="openOpen()" href="#">Open File</a>
       <a href="#">Autocomplete</a>
@@ -142,17 +141,12 @@
       <a onclick="nofeature()" href="#">Start Server</a>
       <a onclick="nofeature()" href="#">Get Server</a>
     <a href="#">Git Menu</a>
-      <a href="#">Clone git repository</a>
-    <a href="#">Open existing repository</a>
-      <a onclick="nofeature()" href="#">Sign into Github</a>
-      <a onclick="nofeature()" href="#">Sign into Gitlab</a>
-      <a href="#">Go to Github</a>
-      <a href="#">Go to Gitlab</a>
-      <a href="#">Color Picker</a>
+     
+    <div id="console"><a href="#">Origami Console</a></div>
+      <a onclick="nofeature()" href="#">Enable Linux</a>
+     
+      <a onclick='window.open("pages/colors.html","Color Picker","width=500, height=701");' href="#">Color Picker</a>
             <a onclick="emuWindow()" href="#">Emulator</a>
-       <a onclick="emuWindow()" href="#">Browser</a>
-       <a onclick="emuWindow()" href="#">Calculator</a>
-      <a onclick="emuWindow()" href="#">Notepad</a>
       <a href="#">Templates</a>
   </div></div>
 
@@ -160,11 +154,33 @@
   <button class="dropb dropbtn65">Settings</button>
   <div class="dropc dropdown-content65">
       <a onclick="darkset()" href="#">Dark Mode</a>
-      <a href="#">Fullscreen</a>
-      <a href="#">Distraction-Free</a>
-      <a href="#">Monochrome mode</a>
-    <a href="#">Hide Emulator</a>
-      <a onclick="update()" href="#">Reset</a>
+     <script>
+      function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+      </script>
+      <a onclick="toggleFullScreen()" href="#">Fullscreen</a>
+     
+    <a onclick='document.getElementById("emulator").style.display = "none";' href="#">Hide Emulator</a>
+      <a onclick='document.getElementById("emulator").style.display = "block";' href="#">Show Emulator</a>
+      
 
   </div></div>
 
@@ -190,71 +206,86 @@
   <td><input type="button" id="cancel" name="cancel" value="Cancel" onclick="cancelSaveFile()" style="padding:5px; margin:0px"></td>
 </div>
 <input type="file" multiple style="display:none;" id="fileElem" name="fileElem[]" style="visibility:hidden; width:30px" onchange="loadFile()">
-
+<div id="toolbar">
      <div class="toolbar">
-         <button onclick='save()' class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Save" onclick='save()' class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="save material-icons">save</i>
 </button>
-         <button onclick="openOpen()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Open File" onclick="openOpen()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="home material-icons">folder_open</i>
 </button>
          
          
-         <button onclick="openFile()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Load" onclick="openFile()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="home material-icons">chevron_right</i>
 </button>
          
          
          
-          <button onclick="on()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button title="Settings" onclick="on()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="settings material-icons">settings</i>
 </button>
-          <button onclick="undo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button title="Undo" onclick="undo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="undo material-icons">undo</i>
 </button>
-         <button onclick="redo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Redo" onclick="redo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="redo material-icons">redo</i>
 </button>
-          <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         
+         <span id="share"> <button title="Share" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="share material-icons">share</i>
-</button>
-         <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+</button></span>
+         
+         <button title="Run" onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="build material-icons">build</i>
 </button>
-          <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button  title="Run" onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="play material-icons">play_arrow</i>
 </button>
-          <button onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button title="Component Creator" onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="polymer material-icons">polymer</i>
 </button>
-         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button onclick='window.open("pages/colors.html","Color Picker","width=500, height=701");' title="Color Picker" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="pick material-icons">color_lens</i>
 </button>
-          <button onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button title="Origami Shell" onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="devmode material-icons">developer_mode</i>
 </button>
-          <button onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
-  <i class="lock material-icons">wifi_lock</i>
+          <button title="Script Generator" onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="lock material-icons">dashboard</i>
 </button>
-         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Git Integration" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="devices material-icons">timeline</i>
+</button>
+         <button title="Show/Hide Linux" onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="devmode material-icons">picture_in_picture_alt</i>
+</button>
+         <button title="Style generator" onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="polymer material-icons">style</i>
+</button>
+         <button title="Emulator" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="devices material-icons">devices</i>
 </button>
-         <button onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Ace Settings" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="share material-icons">code</i>
+</button>
+         <button title="Server Tool" onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="dns material-icons">dns</i>
 </button>
-         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+         <button title="Errors" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="err material-icons">error</i>
 </button>
-          <button onclick="pasteText()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+          <button title="Insert Component" onclick="pasteText()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
   <i class="ins material-icons">
 assignment_returned
 </i>
 </button>
          </div>
-
+</div>
 
 <div class="fulltop">
          <div class="stuff">
+             <div id="tabs">
          <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Widgets')" id="defaultOpen">Widgets</button>
                <button class="tablinks" onclick="openCity(event, 'Buttons')" >Buttons</button>
@@ -267,7 +298,8 @@ assignment_returned
                <button class="tablinks" onclick="openCity(event, 'Inline')">Inline</button>
              <button class="tablinks" onclick="openCity(event, 'Other')">Other</button>
 </div>
-
+</div>
+             <div id="tabscontent">
 <div id="Widgets" class="tabcontent">
 
     <input type="text" value=' <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2"> <input type="checkbox" id="checkbox-2" class="mdl checkbox__input"><span class="mdl-checkbox__label">Checkbox</span></label>' class="data" id="myInput">
@@ -789,8 +821,10 @@ assignment_returned
 <input type="text" value=' <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div> ' class="data" id="radio58">
 <button class="idbt" onclick="myFunction58()">Colored Spinner</button>
 
-</div>
+
+                 </div></div>          
     </div>
+             
          <script>
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -874,7 +908,7 @@ document.getElementById("defaultOpen").click();
     editor.setTheme("ace/theme/chrome");
     editor.session.setMode("ace/mode/html");
     editor.setOptions({
-  fontFamily: 'source_code_proregular',
+  fontFamily: 'Source Code Pro',
   fontSize: "13px"
 });
 </script>
@@ -905,7 +939,18 @@ save()
 });
 
     
-    
+    editor.commands.addCommand({
+name: 'openConsole',
+bindKey: {
+win: 'Ctrl-T',
+mac: 'Command-T',
+sender: 'editor|cli'
+},
+exec: function(env, args, request) {
+openTerminal()
+}
+});  
+  
     
     function save() {
         var code = editor.getValue();
@@ -954,7 +999,7 @@ function openFile(){
 
   <!--Emulator-->
          <div class="vertspacerboi"></div>
-         <div align="right"><div align="center"><div class="emulator"><div align="right" class="controlbar">
+         <div id="emulator" align="right"><div align="center"><div class="emulator"><div align="right" class="controlbar">
 
 
            <input type="text" id="url" class="input" value="Enter location of file...">  <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="mdl-button mdl-js-button mdl-button--icon">

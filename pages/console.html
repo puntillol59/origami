@@ -5,6 +5,9 @@
      <link rel="stylesheet" href="../fonts/compiled/md-icons/material-icons.css">
 <link rel="stylesheet" href="../css/console.css">
 <link rel="stylesheet" href="../css/material.min.css">
+ <link rel="stylesheet" href="../fonts/compiled/console/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/compiled/cousine/stylesheet.css">
+    
 <script src="../js/material.min.js"></script>
 <script defer src="../js/console.js"></script>
      <link rel="stylesheet" href="../css/window.css" />
@@ -34,7 +37,7 @@ body {
   width: 100%;
   background-color: #000000;
   overflow: visible;
-   font-family: 'source_code_proregular';
+ font-family: "Cousine", monospace;
   overflow-y: scroll;
 overflow-x: hidden;
 }
@@ -56,13 +59,9 @@ overflow-x: hidden;
 
 
 <div class="container">
-    <div class="logo"></div>
-  <p class="title"> Origami Console</p>
-  <p class="title"> NodeJS - <script>document.write(process.versions.node)</script></p>
-  <p class="title"> Chromium - <script>document.write(process.versions.chrome)</script></p>
-  <p class="title"> Electron - <script>document.write(process.versions.electron)</script></p>
+    
 
-  <div class="base-line"><p class="base-pointer">></p><input class="base-input" spellcheck="false"></div>
+  <div class="base-line"><p class="base-pointer">origami></p><input class="base-input" spellcheck="false"></div>
 </div>
 <style>
 /* width */
