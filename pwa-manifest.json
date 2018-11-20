@@ -24,10 +24,10 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://nmcain.github.io/origami-pwa/pages/editor-pwamode.html",
+  "start_url": "https://origami-editor.github.io/origami/editor.html",
   
-  "display": "standalone",
-  "background_color": "#FFA000",
+  "display": "fullscreen",
+  "background_color": "#FFFFFF",
   "theme_color": "#FFA000"
 }
 //hi
