@@ -80,6 +80,8 @@ var fontSize = localStorage.getItem("fontSize");
 
 var isDeveloper = localStorage.getItem("isDeveloper");
 
+var isMac = localStorage.getItem("isMac");
+
 var linuxEnabled = localStorage.getItem("linuxEnabled");
 
 var loginAccess = localStorage.getItem("loginAccess");
@@ -111,6 +113,9 @@ var uiTheme = localStorage.getItem("uiTheme");
 var useProductSans = localStorage.getItem("useProductSans");
 
 var viewOnly = localStorage.getItem("viewOnly");
+
+
+
 
 function linuxDisabled() {
     parent.alert("Linux features have been disabled by your administrator")
@@ -176,7 +181,7 @@ else {
 
 
 //customBuild
-/*if (customBuild == 'true') {
+if (customBuild == 'true') {
    
     //alert("customBuild enabled")
     document.getElementById("updstat").innerHTML = '<i class="updicon-err material-icons">warning</i>'
@@ -189,11 +194,11 @@ else if (customBuild == 'false') {
 }
 else {
         alert("The current value for policy customBuild is invalid.")
-    }*/
+    }
 
 
 //demoMode
-/*if (demoMode == 'true') {
+if (demoMode == 'true') {
     //alert("demoMode enabled")
      parent.document.write("demo mode enabled")
 }
@@ -204,7 +209,7 @@ else if (demoMode == 'false') {
 }
 else {
         alert("The current value for policy demoMode is invalid.")
-    }*/
+    }
 
 
 //devConsole
@@ -241,13 +246,13 @@ else {
 
 //deviceFrame
 if (deviceFrame == 'true') {
-    alert("deviceFrame enabled")
+    //alert("deviceFrame enabled")
     
     
 }
 else if (deviceFrame == 'false') {
-    alert("deviceFrame has been disabled by your administrator")
-    
+   // alert("deviceFrame has been disabled by your administrator")
+    parent.document.getElementById("phone").innerHTML = '<iframe id="frame" class="phrame" src="open.html"></iframe>';
     
 }
 else {

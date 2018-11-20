@@ -254,7 +254,10 @@ function interpret() {
     newLine(input);
     }
     
-    
+    else if (input.slice(0,20) == 'policy --override') {
+    window.open("../js/checktest.html","Policy Management","width=768, height=640");
+    newLine(input);
+    }
     
         else if (input.slice(0,20) == 'git') {
     editPointer("git@origami~$");

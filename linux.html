@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <link rel="stylesheet" href="fonts/compiled/roboto/stylesheet.css">
+       <link rel="stylesheet" href="fonts/compiled/productsans/stylesheet.css">
+     <link rel="stylesheet" href="fonts/compiled/md-icons/material-icons.css">
+    <link rel="stylesheet" href="fonts/compiled/cousine/stylesheet.css">
+     <link rel="stylesheet" href="fonts/compiled/console/stylesheet.css">
+    <link rel="stylesheet" href="fonts/compiled/cousine/stylesheet.css">
+    
+    
+<style>
+body {background:#000;margin:0; font-family: 'robotoregular', sans-serif;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    font-family: 'robotoregular', sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab .tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: 'robotoregular', sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab .tablinks.hover {
+    background-color: #ddd;
+    font-family: 'robotoregular', sans-serif;
+}
+
+/* Create an active/current tablink class */
+.tab .tablinks.active {
+    background-color: transparent;
+    box-shadow: inset 0px -3px 0px 0px #ffa000;
+    font-family: 'robotoregular', sans-serif;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    
+    font-family: 'robotoregular', sans-serif;
+    border-top: none;
+}
+    #shell{
+        background:#000;
+        height:calc(100vh - 51px);
+        font-size:15px;
+        font-family:monospace;
+        color:#f44336;
+        font-weight:bold;
+    }
+    .topicon{
+        height:25px;
+        width:25px;
+        border:none;
+        border-radius:100%;
+         background:transparent;
+        
+    }
+    .topicon--new{
+        height:25px;
+        width:25px;
+        border:none;
+        border-radius:100%;
+         background:transparent;
+    }
+    .topicon--small{
+        height:25px;
+        width:25px;
+        border:none;
+        border-radius:100%;
+         background:transparent;
+    }
+    .topicon--small2{
+        height:25px;
+        width:25px;
+       border:none;
+        border-radius:100%;
+        background:transparent;
+    }
+     .topicon:hover{
+        background:#bdbdbd;
+    }
+    .topicon--new:hover{
+        background:#bdbdbd;
+    }
+    .topicon--small:hover{
+        background:#bdbdbd;
+    }
+    .topicon--small2:hover{
+        background:#bdbdbd;
+    }
+    .md{
+        
+    }
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Shell')" id="defaultOpen">Shell</button>
+  <button class="tablinks" onclick="openCity(event, 'gCloud')">Google Cloud</button>
+  <button class="tablinks" onclick="openCity(event, 'v86')">Linux - v86</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Linux - JSLinux</button>
+    
+    <button title="minimize" class="topicon--small2" onclick="null"><i class=" md material-icons">
+keyboard_arrow_down
+</i></button>
+     <button title="maximize" class="topicon--small" onclick="null"><i class="md material-icons">
+keyboard_arrow_up
+</i></button>
+  <button title="New Window" class="topicon--new" onclick="null"><i class="md material-icons">
+open_in_new
+</i></button>
+    
+  <button title="Close for current session" class="topicon" onclick="null"><i class=" md material-icons">
+close
+</i></button>
+    
+</div>
+
+<div id="Shell" class="tabcontent">
+ <iframe id="shell" src="pages/console-embedded.html">
+     [ERROR] [FATAL]: could not connect to task: origami.shellhost
+    </iframe>
+</div>
+
+<div id="gCloud" class="tabcontent">
+    <webview id="shell" src="https://console.cloud.google.com/cloudshell/editor?project=null&shellonly=true&fromcloudshell=true">
+     [ERROR] [FATAL]: could not connect to task: origami.external.gcloud
+    </webview>
+ 
+</div>
+
+<div id="v86" class="tabcontent">
+    <style>
+        .error{
+            font-family:'cousine';
+            color:#f44336;
+            font-size:15px;
+            margin:5px;
+            
+        }
+        .help{
+            font-family:'cousine';
+            color:#fff;
+            font-size:15px;
+            margin:5px;
+        }
+    </style>
+  
+     <webview id="shell" src="core/linux/index.html">
+    <p class="error">
+      <b>[ERROR] [FATAL]: could not create task: origami.v86</b>
+    </p>
+    <p class="help">
+        
+        Linux is not enabled on your device. Use <b>vmc enable</b> from the shell to enable linux on your device.
+        
+    </p>
+    </webview>
+    
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html>

@@ -10,7 +10,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 1200, height: 750,frame: false,backgroundColor: '#e0e0e0',icon: 'img/icon/alpha.png'})
 
   // and load the index.html of the app.
-  mainWindow.loadFile('editor.html')
+  mainWindow.loadFile('linux.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
