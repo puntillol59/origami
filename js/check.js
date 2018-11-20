@@ -82,6 +82,8 @@ var isDeveloper = localStorage.getItem("isDeveloper");
 
 var isMac = localStorage.getItem("isMac");
 
+var isPWA = localStorage.getItem("isPWA");
+
 var linuxEnabled = localStorage.getItem("linuxEnabled");
 
 var loginAccess = localStorage.getItem("loginAccess");
@@ -408,6 +410,22 @@ else if (isDeveloper == 'false') {
 }
 else {
         alert("The current value for policy isDeveloper is invalid.")
+    }
+
+
+//isPWA
+if (isPWA == 'true') {
+    document.getElementById("title-bar").innerHTML = ' ';
+    
+    
+}
+else if (isPWA == 'false') {
+   // alert("isDeveloper has been disabled by your administrator")
+    
+    
+}
+else {
+        alert("The current value for policy isPWA is invalid.")
     }
 
 //linuxEnabled
