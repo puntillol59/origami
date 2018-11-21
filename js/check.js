@@ -82,8 +82,6 @@ var isDeveloper = localStorage.getItem("isDeveloper");
 
 var isMac = localStorage.getItem("isMac");
 
-var isPWA = localStorage.getItem("isPWA");
-
 var linuxEnabled = localStorage.getItem("linuxEnabled");
 
 var loginAccess = localStorage.getItem("loginAccess");
