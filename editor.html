@@ -3,7 +3,24 @@
 <head><script src="js/windows.js"></script>
     <title>Origami Editor</title>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script>
+	    var isPWA = localStorage.getItem("isPWA");
+	    //isPWA
+if (isPWA == 'true') {
+    document.getElementById("title-bar").innerHTML = ' ';
     
+    
+}
+else if (isPWA == 'false') {
+   // alert("isDeveloper has been disabled by your administrator")
+    
+    
+}
+else {
+        alert("The current value for policy isPWA is invalid.")
+    }
+
+	</script>
    <link rel="stylesheet" href="fonts/compiled/roboto/stylesheet.css">
        <link rel="stylesheet" href="fonts/compiled/productsans/stylesheet.css">
      <link rel="stylesheet" href="fonts/compiled/md-icons/material-icons.css">
