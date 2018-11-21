@@ -413,20 +413,6 @@ else {
     }
 
 
-//isPWA
-if (isPWA == 'true') {
-    document.getElementById("title-bar").innerHTML = ' ';
-    
-    
-}
-else if (isPWA == 'false') {
-   // alert("isDeveloper has been disabled by your administrator")
-    
-    
-}
-else {
-        alert("The current value for policy isPWA is invalid.")
-    }
 
 //linuxEnabled
 if (linuxEnabled == 'true') {
